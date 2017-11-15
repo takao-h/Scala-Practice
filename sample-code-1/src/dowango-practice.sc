@@ -9,3 +9,42 @@ x * interesRate / 12 * 8
 val price = 1980000
 val loss = 26400
 val cost = loss * 1.6
+
+
+/**
+  * トレイト
+   */
+
+trait TraitA {
+  val name: String
+  def printName(): Unit = println(name)
+}
+
+//　クラスにしてname に上書き
+class ClassA(val name: String) extends TraitA
+
+object ObjectA {
+  val a = new ClassA("takao")
+
+  val a2 = new TraitA {
+    override val name: String = "はやし"
+  }
+}
+
+
+
+trait A {
+  val foo: String
+}
+
+trait B extends A {
+  val bar = foo + "World"
+}
+
+class C extends B {
+  val foo = "Hello"
+
+  def printBar(): Unit = println(bar)
+}
+
+(new C).printBar()
