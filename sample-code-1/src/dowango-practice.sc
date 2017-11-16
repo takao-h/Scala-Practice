@@ -1,3 +1,4 @@
+import java.awt.Point
 //Q. ¥3,950,000を年利率2.3％の単利で8か月間借り入れた場合の利息はいくらか（円未満切り捨て
 
 val x = 3950000
@@ -48,3 +49,8 @@ class C extends B {
 }
 
 (new C).printBar()
+
+
+object point {
+  def apply(x: Int ,y: Int): Point = new Point(x, y)
+}
