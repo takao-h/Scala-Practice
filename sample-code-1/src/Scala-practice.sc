@@ -68,3 +68,19 @@ f3.apply(10)
 val f4: Int => String = _.toString
 f4(10)
 
+
+
+object  HelloWorld  extends  App{
+    println("hello world")
+}
+class Point (xc: Int, yc: Int){
+  var x = xc
+  var y = yc
+
+  def move(dx: Int, dy: Int): Unit ={
+    x = x + dx
+    y = y + dy
+    Point x location
+    println("" + x)
+  }
+}
